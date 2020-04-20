@@ -1,4 +1,6 @@
-import { capitalize, reverseString, cipher, analyze } from '../src/odin';
+import {
+  capitalize, reverseString, cipher, analyze,
+} from '../src/odin';
 
 const string = 'string';
 
@@ -30,6 +32,9 @@ test('Cypher can encode with shift = 5 keeping correct punctuation', () => {
 test('analyze gives correct data', () => {
   const object = analyze([1, 8, 3, 4, 2, 6]);
   expect(object).toEqual({
-    average: 4, min: 1, max: 8, length: 6,
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
   });
 });

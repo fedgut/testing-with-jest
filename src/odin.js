@@ -3,13 +3,16 @@ function capitalize(string) {
 }
 
 function reverseString(string) {
-  return string.split('').reverse().join('');
+  return string
+    .split('')
+    .reverse()
+    .join('');
 }
 
 function cipher(shift, string) {
   const st = string.split('');
   let newStr = '';
-  st.forEach((x) => {
+  st.forEach(x => {
     if (x.charCodeAt() >= 97 && x.charCodeAt() <= 122) {
       if (x.charCodeAt() + shift > 122) {
         newStr += String.fromCharCode(x.charCodeAt() + shift - 26);
@@ -37,9 +40,16 @@ function averageF(arr) {
 function analyze(arr) {
   const min = Math.min(...arr);
   const max = Math.max(...arr);
-  const length = arr.length;
+  const { length } = arr;
   const average = averageF(arr);
-  return { average, min, max, length };
+  return {
+    average,
+    min,
+    max,
+    length,
+  };
 }
 
-export { capitalize, reverseString, cipher, analyze };
+export {
+  capitalize, reverseString, cipher, analyze,
+};

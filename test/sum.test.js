@@ -1,4 +1,6 @@
-import { sum, substract, divide, multiply } from '../src/sum';
+import {
+  sum, substract, divide, multiply,
+} from '../src/sum';
 
 test('adds 1 + 2 to equal 3', () => {
   const total = sum(1, 2);
